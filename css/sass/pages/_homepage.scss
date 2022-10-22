@@ -1,0 +1,252 @@
+
+/* Start Slider*/
+.slider{
+    blockquote{
+        font: {
+            size: 20px;
+            style: italic;
+            family: Tahoma, Arial;
+            weight: bold;
+        }
+        line-height: 1.7;
+        text-align: center;
+        color: #585858;
+        width: 80%;
+        margin: 30px auto;
+    }
+    img{
+        max-width: 100%;
+    }
+    .bullets{
+        text-align: center;
+        li{
+            display: inline-block;
+            background-color: $greyColor;
+            width: 20px;
+            height:20px;
+            border-radius: 50%;
+            border: 2px solid $greyColor;
+            cursor: pointer;
+            &.active,
+            &:hover{
+                background-color: #fff;
+                border: 2px solid #333;
+            }
+        }
+    }
+}
+/* End Slider*/
+/* Start Services*/
+.services{
+    .service-box{
+        @media #{$minMedium}{
+            float: $float-left;
+            width: calc(96% / 3);
+            &:not(:nth-of-type(4)){
+            margin-right: 2%;
+            }
+        }
+        @media #{$maxMobile}{
+            i{
+                display: block;
+                margin-bottom: 15px;
+            }
+        }
+
+        .service-title{
+            color: #666;
+            i{
+                font-size: 35px;
+                position: relative;
+                top: 4px;
+            }
+        }
+        .service-desc{
+            color: #777;
+            line-height: 1.6;
+        }
+        .link{
+            color: $redColor;
+            text-decoration:  none;
+        }
+    }
+}
+/* End Services*/
+/* Start Our Players*/
+.our-players{
+    .player-box{
+        @media #{$minSmall}{
+            float: left;
+            width: calc(92% / 2);
+            text-align: center;
+            margin: 0 2% 40px;
+        }
+        @media #{$minMedium}{
+            width: calc(100% / 3);
+            text-align: $text-left;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin: 20px 0;
+        }
+        @media #{$minLarge}{
+            width: calc(100% / 5);
+        }
+        @media #{$maxMobile}{
+            margin-bottom: 40px;
+        }
+        .player-img{
+            max-width: 100%;
+        }
+        .player-title{
+            color: #666;
+            font-weight: normal;
+            span{
+                font-weight: bold;
+            }
+        }
+        .player-desc{
+            color: #777;
+            line-height: 1.6;
+        }
+        .link{
+            color: $redColor;
+            text-decoration:  none;
+        }
+    }
+}
+/* End Our Players*/
+/* Start Lorem Ipsum*/
+.lorem-ipsum{
+    .lorem-box{
+        text-align: center;
+        margin-bottom: 40px;
+        @media #{$minSmall}{
+            text-align: $text-left;
+            margin-bottom: 0 !important;
+            float: $float-left;
+            width: calc(94% / 3);
+            &:not(:last-child){
+            margin-right: 3%;
+            }
+        }
+        .lorem-img{
+            max-width: 100%;
+            transition: .5s;
+            cursor: pointer;
+            &:hover{
+                opacity: 0.9;
+                @include prefixer(box-shadow, 0 0 5px 1px rgb(39, 38, 38), webkit moz);
+            }
+        }
+    }
+}
+/* End Lorem Ipsum*/
+/* Start blog*/
+.blog{
+    .section-title{
+        margin: 20px auto 30px;
+        font-weight: normal;
+        text-align: center;
+    }
+    .box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: calc(100% / 3);
+            background-color: #fafafa;
+            border-radius: 6px;
+            @include prefixer(box-shadow, 0 0 8px 0px #0000002e, webkit moz);
+            padding: 15px 10px;
+                margin: 1%;
+            @media #{$maxMedium} {
+                width: 48% !important;
+            }
+            @media #{$maxSmall} and #{$maxMobile}{
+                width: 98% !important;
+            }
+            .head {
+                display: block;
+                text-align: center;
+                .img-box {
+                    overflow: hidden;
+                    img {
+                        width: 58px;
+                        height: 58px;
+                        border-radius: 50%;
+                        border: 2px solid #fff;
+                    }
+                }
+            }
+            .text {
+                width: 200px;
+                text-align: justify;
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+/* End blog*/
+/* Start Conatct*/
+.contact{
+    .holder{
+        display: flex;
+        flex-wrap: wrap;
+        .info,.contact {
+            width: 50%;
+            @media #{$maxMobile} {
+                width: 100% !important;
+            }
+        }
+        .info {
+            line-height: 1.6;
+            ul {
+                color: #888;
+                li {
+                    font-size: 14px;
+                    span {
+                        color: $redColor;
+                        font-weight: bold;
+                    }
+                }
+            }
+            h4 {
+                color: #888;
+                font-weight: bold;
+                margin-bottom: 8px;
+            }
+            p {
+                color: #888;
+                margin-top: 8px;
+            }
+        }
+        .contact {
+            form{
+                display: flex;
+                flex-direction: column;
+                input[type="text"],
+                input[type="email"],
+                textarea {
+                    border: 1px solid #e9e9e9;
+                    padding: 10px;
+                    margin-bottom: 5px;
+                    border-radius: 10px;
+                    width: 100%;
+                    outline: none;
+                    line-height: 1.6;
+                    font-size: 14px;
+                }
+                textarea {
+                    height: 140px;
+                }
+            }
+        }
+    }
+}
+/* End Conatct*/

@@ -1,0 +1,24 @@
+/* Start Footer*/
+.footer{
+    background-color: #000000d1;
+    overflow: hidden;
+    margin-top: 100px;
+    height: 85px;
+    .copyright{
+        color: #fafafa;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 36px auto;
+        .text{
+            text-align: center;
+            font-size: 14px;
+            .author{
+                color: #009688;
+                font-weight: bold;
+            }
+        }
+    }
+}
+/* End Footer*/
